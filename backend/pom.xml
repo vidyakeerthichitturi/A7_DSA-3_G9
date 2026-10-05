@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>PLAGIARISM</groupId>
+    <artifactId>PLAGIARISM</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+
+    <!-- ========================================= -->
+    <!-- PROJECT SETTINGS                          -->
+    <!-- ========================================= -->
+
+    <properties>
+
+        <maven.compiler.release>21</maven.compiler.release>
+
+        <project.build.sourceEncoding>
+            UTF-8
+        </project.build.sourceEncoding>
+
+    </properties>
+
+
+    <!-- ========================================= -->
+    <!-- DJL VERSION MANAGEMENT                    -->
+    <!-- ========================================= -->
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <dependency>
+
+                <groupId>ai.djl</groupId>
+
+                <artifactId>bom</artifactId>
+
+                <version>0.38.0</version>
+
+                <type>pom</type>
+
+                <scope>import</scope>
+
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+
+    <!-- ========================================= -->
+    <!-- DEPENDENCIES                              -->
+    <!-- ========================================= -->
+
+    <dependencies>
+
+
+        <!-- ===================================== -->
+        <!-- DJL CORE                              -->
+        <!-- ===================================== -->
+
+        <dependency>
+
+            <groupId>ai.djl</groupId>
+
+            <artifactId>api</artifactId>
+
+        </dependency>
+
+
+        <!-- ===================================== -->
+        <!-- HUGGING FACE TOKENIZERS               -->
+        <!-- ===================================== -->
+
+        <dependency>
+
+            <groupId>ai.djl.huggingface</groupId>
+
+            <artifactId>tokenizers</artifactId>
+
+        </dependency>
+
+
+        <!-- ===================================== -->
+        <!-- PYTORCH ENGINE                        -->
+        <!-- ===================================== -->
+
+        <dependency>
+
+            <groupId>ai.djl.pytorch</groupId>
+
+            <artifactId>pytorch-engine</artifactId>
+
+            <scope>runtime</scope>
+
+        </dependency>
+
+
+        <!-- ===================================== -->
+        <!-- PYTORCH JNI                           -->
+        <!-- ===================================== -->
+
+        <dependency>
+
+            <groupId>ai.djl.pytorch</groupId>
+
+            <artifactId>pytorch-jni</artifactId>
+
+            <version>2.7.1-0.38.0</version>
+
+            <scope>runtime</scope>
+
+        </dependency>
+
+
+        <!-- ===================================== -->
+        <!-- PYTORCH NATIVE CPU - WINDOWS         -->
+        <!-- ===================================== -->
+
+        <dependency>
+
+            <groupId>ai.djl.pytorch</groupId>
+
+            <artifactId>pytorch-native-cpu</artifactId>
+
+            <version>2.7.1</version>
+
+            <classifier>win-x86_64</classifier>
+
+            <scope>runtime</scope>
+
+        </dependency>
+
+
+        <!-- ===================================== -->
+        <!-- JAVALIN WEB API                       -->
+        <!-- ===================================== -->
+
+        <dependency>
+
+            <groupId>io.javalin</groupId>
+
+            <artifactId>javalin</artifactId>
+
+            <version>6.7.0</version>
+
+        </dependency>
+
+
+        <!-- ===================================== -->
+        <!-- JACKSON JSON SUPPORT                  -->
+        <!-- ===================================== -->
+
+        <dependency>
+
+            <groupId>com.fasterxml.jackson.core</groupId>
+
+            <artifactId>jackson-databind</artifactId>
+
+            <version>2.17.2</version>
+
+        </dependency>
+
+
+        <!-- ===================================== -->
+        <!-- SLF4J LOGGING                         -->
+        <!-- ===================================== -->
+
+        <dependency>
+
+            <groupId>org.slf4j</groupId>
+
+            <artifactId>slf4j-simple</artifactId>
+
+            <version>2.0.16</version>
+
+        </dependency>
+
+
+    </dependencies>
+
+
+    <!-- ========================================= -->
+    <!-- BUILD CONFIGURATION                      -->
+    <!-- ========================================= -->
+
+    <build>
+
+        <sourceDirectory>src</sourceDirectory>
+
+        <plugins>
+
+            <plugin>
+
+                <artifactId>maven-compiler-plugin</artifactId>
+
+                <version>3.13.0</version>
+
+                <configuration>
+
+                    <release>21</release>
+
+                </configuration>
+
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+
+</project>
